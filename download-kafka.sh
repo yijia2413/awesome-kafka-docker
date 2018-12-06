@@ -5,6 +5,7 @@ set -ex
 CUR_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 TARS_DIR="${CUR_DIR}/tars"
 mkdir -p ${TARS_DIR}
+mkdir -p ${CUR_DIR}/logs
 
 KAFKA_VERSION=2.1.0
 SCALA_VERSION=2.12
