@@ -2,6 +2,7 @@ version: '3'
 services:
   zookeeper:
     image: zookeeper
+    restart: always
     # container_name: zookeeper
     networks:
         mykafka:
@@ -15,6 +16,7 @@ services:
     build: .
     env_file: .env
     image: kafka
+    restart: always
     # container_name: kafka
     networks:
         mykafka:

@@ -88,6 +88,13 @@ We use [Kafkacat](https://github.com/edenhill/kafkacat) for testing, you have to
 
 > If you have any network problems here, please open an issue.
 
+### Resolve hostname
+```bash
+# add docker ip-host map to /etc/hosts, so that you can connect to inner kafka by HOST_IP:HOST_PORT
+# of course /etc/hosts will be backup
+sh resolve-hostname.sh
+```
+
 ### consume
 ```bash
 sh test.sh p
@@ -98,9 +105,12 @@ sh test.sh p
 sh test.sh c
 ```
 
+Also, you can have a try with Python Kafka API.
+
 ## Features
 * auto create topic when consuming or producing, default partition is 1
 * alpine java8, very small image, easy to scale out
+* remote kafka connection
 
 ## TODO
 - [ ] Docker Swarm
