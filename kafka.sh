@@ -19,7 +19,7 @@ elif [[ "$1" =~ ^[0-9]+$ ]]; then
         echo "Kafka containers can not be 0 or more than ${MAX_CONTAINERS}"
         echo "Please Check the numbers"
     else
-        docker-compose up -d
+        # docker-compose up -d
         docker-compose up -d --scale kafka=$1 --no-recreate
     fi
 else
