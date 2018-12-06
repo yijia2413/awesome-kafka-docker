@@ -9,7 +9,7 @@ CUR_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 cd ${CUR_DIR}
 
 if [[ $1 == 'build' ]]; then
-    docker-compose up --force-recreate --build
+    docker-compose up -d --force-recreate --build
 elif [[ $1 == 'start' ]]; then
     docker-compose up -d
 elif [[ $1 == 'stop' ]]; then
